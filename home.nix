@@ -13,7 +13,7 @@
     rofi    
     helix
     tmux
-    
+    kdePackages.dolphin
   ];
 
   programs = {
