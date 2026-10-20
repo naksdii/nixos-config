@@ -27,7 +27,7 @@
 							useGlobalPkgs = true;
 							useUserPackages = true;
 							users.naksdii = import ./home.nix;
-							extraSpecialArgs = { inherit inputs; };
+							extraSpecialArgs = { inherit inputs self; };
 						};
 					}
 				];
