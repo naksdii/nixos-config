@@ -14,6 +14,7 @@
     helix
     tmux
     kdePackages.dolphin
+    
   ];
 
   programs = {
@@ -28,11 +29,9 @@
       enabledExtensions = with spicePkgs.extensions; [
         adblock
         hidePodcasts
-        shuffle
       ];
       enabledCustomApps = with spicePkgs.apps; [
         newReleases
-        ncsVisualizer
       ];
       enabledSnippets = with spicePkgs.snippets; [
         rotatingCoverart
