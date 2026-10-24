@@ -2,15 +2,14 @@
 {
 xdg.portal = {
   enable = true;
+  wlr.enable = false; # Mantenha false se não estiver usando o wlroots nativo (niri usa a API do mutter/gnome)
   extraPortals = [
     pkgs.xdg-desktop-portal-gnome
     pkgs.xdg-desktop-portal-gtk
   ];
   config = {
     common = {
-      default = [ "gnome" "gtk" ];
-      # Garante que o seletor de tela use o backend correto
-      "org.freedesktop.impl.portal.Screencast" = [ "gnome" ];
+      default = [ "gnome" ];
     };
   };
 };
