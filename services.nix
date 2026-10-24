@@ -44,11 +44,22 @@ xdg.portal = {
     };
   };
 
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
+  services={
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
+    greetd = {
+      enable = true;
+      settings = {
+        default_session = {
+          command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd 'niri-session'";
+          user = "naksdii"; # Substitua pelo seu usuário, caso necessário
+        };
+      };
+    };
   };
 
   hardware.pulseaudio.enable = false;
