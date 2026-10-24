@@ -1,12 +1,19 @@
 { config, pkgs, ...}:
 {
-  xdg.portal = {
-    enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gnome
-      pkgs.xdg-desktop-portal-gtk
-    ];
+xdg.portal = {
+  enable = true;
+  extraPortals = [
+    pkgs.xdg-desktop-portal-gnome
+    pkgs.xdg-desktop-portal-gtk
+  ];
+  config = {
+    common = {
+      default = [ "gnome" "gtk" ];
+      # Garante que o seletor de tela use o backend correto
+      "org.freedesktop.impl.portal.Screencast" = [ "gnome" ];
+    };
   };
+};
   services.flatpak.enable = true;
   
   programs.xwayland.enable = true;
