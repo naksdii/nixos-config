@@ -7,10 +7,11 @@ xdg.portal = {
     pkgs.xdg-desktop-portal-gnome
     pkgs.xdg-desktop-portal-gtk
   ];
-  config = {
-    common = {
-      default = [ "gnome" ];
-    };
+  config.niri = {
+    default = [ "gnome" "gtk" ];
+    "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
+    "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
+    "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
   };
 };
   services.flatpak.enable = true;
