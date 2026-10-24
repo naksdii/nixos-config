@@ -14,9 +14,7 @@ xdg.portal = {
   };
 };
   services.flatpak.enable = true;
-  
-  programs.xwayland.enable = true;
-  
+    
   users = {
     users = {
       naksdii = { 
@@ -26,6 +24,9 @@ xdg.portal = {
   };
   
   programs={
+    xwayland.enable=true;
+    niri.enable = true;
+    fuse.userAllowOther = true;
     zsh ={
       enable=true;
       enableSyntaxHighlighting = true;

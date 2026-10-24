@@ -2,21 +2,19 @@
 {
   imports = [inputs.spicetify-nix.homeManagerModules.default];
   
-  home.username = "naksdii";
-  home.homeDirectory = "/home/naksdii";
-
-  home.stateVersion = "26.05";
-
-  home.packages = with pkgs; [
-    cowsay
-    easyeffects
-    rofi    
-    helix
-    tmux
-    kdePackages.dolphin
-    
-  ];
-
+  home = {
+    username = "naksdii";
+    homeDirectory = "/home/naksdii";
+    stateVersion = "26.05";
+    packages = with pkgs; [
+      cowsay
+      easyeffects
+      rofi    
+      helix
+      tmux
+      kdePackages.dolphin
+    ];
+  };
   programs = {
     home-manager.enable = true;
     spicetify =
