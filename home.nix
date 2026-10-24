@@ -13,6 +13,7 @@
       helix
       tmux
       kdePackages.dolphin
+      jdk21_headless
     ];
   };
   programs = {
