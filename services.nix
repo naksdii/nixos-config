@@ -2,7 +2,7 @@
 {
 xdg.portal = {
   enable = true;
-  wlr.enable = false; # Mantenha false se não estiver usando o wlroots nativo (niri usa a API do mutter/gnome)
+  wlr.enable = false; 
   extraPortals = [
     pkgs.xdg-desktop-portal-gnome
     pkgs.xdg-desktop-portal-gtk
@@ -10,15 +10,15 @@ xdg.portal = {
     pkgs.kdePackages.xdg-desktop-portal-kde
   ];
   config = {
-common.default = [ "gnome" "gtk" ];
+    common.default = [ "gnome" "gtk" ];
 
-  niri = {
-    default = [ "gnome" "gtk" ];
-    "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
-    "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
-    "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
+    niri = {
+      default = [ "gnome" "gtk" ];
+        "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
+        "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
+      };
   };
-};
 };
   services.flatpak.enable = true;
     
