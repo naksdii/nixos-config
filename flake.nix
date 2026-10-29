@@ -1,4 +1,4 @@
-{	
+{
 	inputs = {
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 		home-manager = {
@@ -9,7 +9,7 @@
 			url = "github:Gerg-L/spicetify-nix";
 		};
 	};
-	outputs = { self, nixpkgs, home-manager, spicetify-nix, ... }@inputs: 
+	outputs = { self, nixpkgs, home-manager, spicetify-nix,... }@inputs: 
 	{
 		nixosConfigurations = 
 		{

@@ -1,6 +1,8 @@
 { config, pkgs, inputs, self, ... }:
 {
-  imports = [inputs.spicetify-nix.homeManagerModules.default];
+  imports = [
+    inputs.spicetify-nix.homeManagerModules.default    
+  ];
   
   home = {
     username = "naksdii";
@@ -13,7 +15,9 @@
       helix
       tmux
       kdePackages.dolphin
-      jdk21_headless
+      jdk21
+      grim
+      slurp
     ];
   };
   programs = {
