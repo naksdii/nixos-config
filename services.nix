@@ -9,12 +9,16 @@ xdg.portal = {
   ] ++ [
     pkgs.kdePackages.xdg-desktop-portal-kde
   ];
-  config.niri = {
+  config = {
+common.default = [ "gnome" "gtk" ];
+
+  niri = {
     default = [ "gnome" "gtk" ];
     "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
     "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
     "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
   };
+};
 };
   services.flatpak.enable = true;
     
