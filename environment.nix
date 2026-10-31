@@ -19,6 +19,7 @@
 	xwayland
 	xwayland-satellite
 	vesktop
+	nautilus
 	];
 	fonts.packages = with pkgs; [
 		nerd-fonts.jetbrains-mono

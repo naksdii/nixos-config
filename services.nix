@@ -11,8 +11,8 @@ xdg.portal = {
     common.default = [ "gnome" "gtk" ];
 
     niri = {
-      default = [ "gnome" "gtk" ];
-      "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];
+      default = [ "gnome" "gtk"];
+      "org.freedesktop.impl.portal.FileChooser" = [ "gnome" ];
     };
   };
 };
