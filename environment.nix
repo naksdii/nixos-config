@@ -20,6 +20,8 @@
 	xwayland-satellite
 	vesktop
 	nautilus
+	gcc
+	gnumake
 	];
 	fonts.packages = with pkgs; [
 		nerd-fonts.jetbrains-mono
