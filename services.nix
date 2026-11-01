@@ -30,6 +30,7 @@ xdg.portal = {
     xwayland.enable=true;
     niri.enable = true;
     fuse.userAllowOther = true;
+    ydotool.enable = true;
     zsh ={
       enable=true;
       enableSyntaxHighlighting = true;

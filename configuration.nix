@@ -52,7 +52,7 @@
   users.users."naksdii" = {
     isNormalUser = true;
     description = "Micaelle";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "ydotool" ];
     packages = with pkgs; [];
   };
 
