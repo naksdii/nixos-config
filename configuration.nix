@@ -14,8 +14,6 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.extraModulePackages = [config.boot.kernelPackages.v4l2loopback];
-  boot.kernelModules = ["v4l2loopback"];
 
   networking.hostName = "nixos"; # Define your hostname.
   boot.kernelPackages = pkgs.linuxPackages_latest;
