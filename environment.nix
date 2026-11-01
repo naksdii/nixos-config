@@ -22,6 +22,7 @@
 	nautilus
 	gcc
 	gnumake
+	ydotool
 	];
 	fonts.packages = with pkgs; [
 		nerd-fonts.jetbrains-mono
