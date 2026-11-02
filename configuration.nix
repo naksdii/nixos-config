@@ -5,12 +5,12 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./environment.nix
-      ./services.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./environment.nix
+    ./services.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -50,25 +50,32 @@
   users.users."naksdii" = {
     isNormalUser = true;
     description = "Micaelle";
-    extraGroups = [ "networkmanager" "wheel" "ydotool" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "ydotool"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   fonts.packages = with pkgs; [
-	noto-fonts
-	noto-fonts-cjk-sans
-  	noto-fonts-color-emoji
- 	liberation_ttf
- 	fira-code
- 	fira-code-symbols
- 	mplus-outline-fonts.githubRelease
- 	dina-font
-  	proggyfonts
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+    dina-font
+    proggyfonts
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   system.stateVersion = "26.05"; # Did you read the comment?
 }

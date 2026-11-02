@@ -1,9 +1,15 @@
-{ config, pkgs, inputs, self, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  self,
+  ...
+}:
 {
   imports = [
-    inputs.spicetify-nix.homeManagerModules.default    
+    inputs.spicetify-nix.homeManagerModules.default
   ];
-  
+
   home = {
     username = "naksdii";
     homeDirectory = "/home/naksdii";
@@ -11,35 +17,36 @@
     packages = with pkgs; [
       cowsay
       easyeffects
-      rofi    
+      rofi
       helix
       tmux
       kdePackages.dolphin
       jdk21
       grim
       slurp
+      pineconemc
     ];
   };
   programs = {
     home-manager.enable = true;
     spicetify =
-    let
-      spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-    in
-    {
-      enable = true;
+      let
+        spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+      in
+      {
+        enable = true;
 
-      enabledExtensions = with spicePkgs.extensions; [
-        adblock
-        hidePodcasts
-      ];
-      enabledCustomApps = with spicePkgs.apps; [
-        newReleases
-      ];
-      enabledSnippets = with spicePkgs.snippets; [
-        rotatingCoverart
-        pointer
-      ];
-    };
+        enabledExtensions = with spicePkgs.extensions; [
+          adblock
+          hidePodcasts
+        ];
+        enabledCustomApps = with spicePkgs.apps; [
+          newReleases
+        ];
+        enabledSnippets = with spicePkgs.snippets; [
+          rotatingCoverart
+          pointer
+        ];
+      };
   };
 }

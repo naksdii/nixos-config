@@ -1,38 +1,44 @@
-{ config, pkgs, ...}:
+{ config, pkgs, ... }:
 {
-xdg.portal = {
-  enable = true;
-  wlr.enable = false; 
-  extraPortals = [
-    pkgs.xdg-desktop-portal-gnome
-    pkgs.xdg-desktop-portal-gtk
-  ];
-  config = {
-    common.default = [ "gnome" "gtk" ];
+  xdg.portal = {
+    enable = true;
+    wlr.enable = false;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gnome
+      pkgs.xdg-desktop-portal-gtk
+    ];
+    config = {
+      common.default = [
+        "gnome"
+        "gtk"
+      ];
 
-    niri = {
-      default = [ "gnome" "gtk"];
-      "org.freedesktop.impl.portal.FileChooser" = [ "gnome" ];
+      niri = {
+        default = [
+          "gnome"
+          "gtk"
+        ];
+        "org.freedesktop.impl.portal.FileChooser" = [ "gnome" ];
+      };
     };
   };
-};
   services.flatpak.enable = true;
-    
+
   users = {
     users = {
-      naksdii = { 
+      naksdii = {
         shell = pkgs.zsh;
       };
     };
   };
-  
-  programs={
-    xwayland.enable=true;
+
+  programs = {
+    xwayland.enable = true;
     niri.enable = true;
     fuse.userAllowOther = true;
     ydotool.enable = true;
-    zsh ={
-      enable=true;
+    zsh = {
+      enable = true;
       enableSyntaxHighlighting = true;
       autosuggestions.enable = true;
       ohMyZsh = {
@@ -55,7 +61,7 @@ xdg.portal = {
     };
   };
 
-  services={
+  services = {
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -77,5 +83,5 @@ xdg.portal = {
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-  };  
+  };
 }
