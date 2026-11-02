@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "grub-theme": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793649751,
+        "narHash": "sha256-mNNI3sU7ohU/hw681ZSbmcVY6f6S+HCtGKuzqgWGolw=",
+        "owner": "naksdii",
+        "repo": "grub-theme",
+        "rev": "ecc894717de059a47b3b90ba373dbb43a83c72c1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "naksdii",
+        "repo": "grub-theme",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -56,21 +76,22 @@
         ]
       },
       "locked": {
-        "lastModified": 1790755757,
-        "narHash": "sha256-BdJTMdGzxTWbNpA9qMpyHX6zbr6h9gH5E1E4PVZhqvU=",
-        "owner": "Damima3369",
+        "lastModified": 1793647263,
+        "narHash": "sha256-jY0AWbqBytWMZD7eAtcKytw1PEtluprXw9vebt0qhZc=",
+        "owner": "naksdii",
         "repo": "PineconeMC",
-        "rev": "73173aba1d4f9fccd183dd5d5d89b8405abcb926",
+        "rev": "4f9a6746376068b334355f8054d6f156decb4bfa",
         "type": "github"
       },
       "original": {
-        "owner": "Damima3369",
+        "owner": "naksdii",
         "repo": "PineconeMC",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
+        "grub-theme": "grub-theme",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "pineconemc": "pineconemc",
