@@ -22,12 +22,18 @@
       };
     };
   };
-  services.flatpak.enable = true;
 
   users = {
     users = {
       naksdii = {
         shell = pkgs.zsh;
+        isNormalUser = true;
+        description = "Micaelle";
+        extraGroups = [
+          "networkmanager"
+          "wheel"
+          "ydotool"
+        ];
       };
     };
   };
@@ -64,8 +70,10 @@
   services = {
     pipewire = {
       enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
       pulse.enable = true;
     };
     greetd = {
@@ -77,11 +85,18 @@
         };
       };
     };
+    flatpak.enable = true;
+    xserver.xkb = {
+      layout = "br";
+      variant = "";
+    };
   };
 
-  hardware.pulseaudio.enable = false;
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
+  hardware = {
+    pulseaudio.enable = false;
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
   };
 }
