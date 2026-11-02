@@ -9,8 +9,18 @@
 
   boot = {
     loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
+      systemd-boot.enable = false;
+
+      efi = {
+        canTouchEfiVariables = true;
+      };
+
+      grub = {
+        enable = true;
+        efiSupport = true;
+        device = "nodev";
+        theme = pkgs.grub-theme;
+      };
     };
     kernelPackages = pkgs.linuxPackages_latest;
   };

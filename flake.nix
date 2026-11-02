@@ -11,7 +11,11 @@
       url = "github:Gerg-L/spicetify-nix";
     };
     pineconemc = {
-      url = "github:Damima3369/PineconeMC";
+      url = "github:naksdii/PineconeMC";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    grub-theme = {
+      url = "github:naksdii/grub-theme";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -22,6 +26,7 @@
       home-manager,
       spicetify-nix,
       pineconemc,
+      grub-theme,
       ...
     }@inputs:
     {
@@ -42,7 +47,10 @@
                 extraSpecialArgs = { inherit inputs self; };
               };
               nixpkgs = {
-                overlays = [ pineconemc.overlays.default ];
+                overlays = [
+                  pineconemc.overlays.default
+                  grub-theme.overlays.default
+                ];
               };
             }
           ];
