@@ -49,10 +49,31 @@
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
       }
     },
+    "pineconemc": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790755757,
+        "narHash": "sha256-BdJTMdGzxTWbNpA9qMpyHX6zbr6h9gH5E1E4PVZhqvU=",
+        "owner": "Damima3369",
+        "repo": "PineconeMC",
+        "rev": "73173aba1d4f9fccd183dd5d5d89b8405abcb926",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Damima3369",
+        "repo": "PineconeMC",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
+        "pineconemc": "pineconemc",
         "spicetify-nix": "spicetify-nix"
       }
     },

@@ -23,6 +23,7 @@
 	gcc
 	gnumake
 	ydotool
+ 	nixfmt
 	];
 	fonts.packages = with pkgs; [
 		nerd-fonts.jetbrains-mono

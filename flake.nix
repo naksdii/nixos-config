@@ -8,8 +8,12 @@
 		spicetify-nix = {
 			url = "github:Gerg-L/spicetify-nix";
 		};
+		pineconemc = {
+    		url = "github:Damima3369/PineconeMC";
+    		inputs.nixpkgs.follows = "nixpkgs";
+  		};
 	};
-	outputs = { self, nixpkgs, home-manager, spicetify-nix,... }@inputs: 
+	outputs = { self, nixpkgs, home-manager, spicetify-nix, pineconemc,... }@inputs: 
 	{
 		nixosConfigurations = 
 		{
@@ -29,6 +33,7 @@
 							users.naksdii = import ./home.nix;
 							extraSpecialArgs = { inherit inputs self; };
 						};
+						nixpkgs.overlays = [ pineconemc.overlays.default ];
 					}
 				];
 			};
