@@ -7,7 +7,7 @@
     fastfetch
     hyfetch
     helix
-    vscode-fhs
+    vscode
     vivaldi
     godot-mono
     dotnet-sdk
