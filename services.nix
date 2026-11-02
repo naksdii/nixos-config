@@ -74,7 +74,7 @@ xdg.portal = {
   };
 
   hardware.pulseaudio.enable = false;
-    hardware.graphics = {
+  hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };  
